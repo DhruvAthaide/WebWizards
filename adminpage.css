@@ -1,0 +1,67 @@
+/* Navbar */
+nav {
+    padding-top: 19px;
+    width: 70vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+  }
+  .navlogo {
+    display: flex;
+    max-width: 10%;
+    height: auto;
+  }
+  .navbar {
+    position: relative;
+    text-decoration: none;
+    color: #222;
+    font-size: 18px;
+    letter-spacing: 5px;
+    padding: 0 20px;
+    cursor: pointer;
+  }
+  .navbar:before,
+  .navbar:after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    background: orangered;
+    transition: 0.5s;
+  }
+  .navbar:after {
+    left: 0;
+    bottom: -10px;
+  }
+  .navbar:before {
+    right: 0;
+    top: -10px;
+  }
+  .navbar:hover:after,
+  a:hover:before {
+    width: 100%;
+  }
+  /* NavBar Ends */
+  
+  /* Pages */
+  .body {
+    margin: 0em;
+  }
+  
+  .page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0, 0%, 100%);
+  }
+  
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+  }
+  /* Pages End */
