@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/DhruvAthaide/WebWizards/issues"
   },
-  "homepage": "https://github.com/DhruvAthaide/WebWizards#readme"
+  "homepage": "https://github.com/DhruvAthaide/WebWizards#readme",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
 }
