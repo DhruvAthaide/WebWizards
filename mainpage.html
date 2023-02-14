@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Higher Educational Directorate</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="mainpage.css" />
+</head>
+
+<!-- NavBar -->
+<nav>
+  <img src="mh1.png" alt="logo" class="navlogo" />
+  <a href="#one" class="navbar">Home</a>
+  <a href="#two" class="navbar">About</a>
+  <a href="#three" class="navbar">Contact</a>
+</nav>
+<!-- Pages -->
+<div class="page" id="one">
+  <nav>
+    <img src="mh1.png" alt="logo" class="navlogo" />
+    <a href="#one" class="navbar">Home</a>
+    <a href="#two" class="navbar">About</a>
+    <a href="#three" class="navbar">Contact</a>
+  </nav>
+  <ul>
+    <li><a href="#">Back</a></li>
+    <li><a href="#two">Page 2</a></li>
+  </ul>
+</div>
+
+<div class="page" id="two">
+  <nav>
+    <img src="mh1.png" alt="logo" class="navlogo" />
+    <a href="#one" class="navbar">Home</a>
+    <a href="#two" class="navbar">About</a>
+    <a href="#three" class="navbar">Contact</a>
+  </nav>
+  Content of page 2 goes here.
+</div>
+<div class="page" id="three">
+  <nav>
+    <img src="mh1.png" alt="logo" class="navlogo" />
+    <a href="#one" class="navbar">Home</a>
+    <a href="#two" class="navbar">About</a>
+    <a href="#three" class="navbar">Contact</a>
+  </nav>
+  <div class="contactpage">
+    <div class="container">
+      <div class="content">
+        <div class="left-side">
+          <div class="address details">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="topic">Address</div>
+            <div class="text-one">Amity Mumbai</div>
+            <div class="text-two">Bhatan Mumbai Pune Expressway</div>
+          </div>
+          <div class="phone details">
+            <i class="fas fa-phone-alt"></i>
+            <div class="topic">Phone</div>
+            <div class="text-one">+91 9320693337</div>
+            <div class="text-two">+91 9372660546</div>
+          </div>
+          <div class="email details">
+            <i class="fas fa-envelope"></i>
+            <div class="topic">Email</div>
+            <div class="text-one">webwizards@gmail.com</div>
+            <div class="text-two">nirman@gmail.com</div>
+          </div>
+        </div>
+        <div class="right-side">
+          <div class="topic-text">Send us a message</div>
+          <form id="myform" method="post"
+            action="https://script.google.com/macros/s/AKfycbw64ay3jQ29EtPS5l7-IINyEp0tSY3vJ0Ur01q4_NUwLB0hhzDeqRY545Hkku05iGMHAg/exec">
+            <div class="input-box">
+              <input type="text" placeholder="Enter your name" id="full_name" name="full_name" required>
+            </div>
+            <div class="input-box">
+              <input type="text" placeholder="Enter your email" id="full_email" name="full_email" required>
+            </div>
+            <div class="input-box message-box">
+              <input type="text" placeholder="Enter your Message" id="full_message" name="full_message" required>
+            </div>
+            <div class="button">
+              <input type="submit" class="submit-finalbtn" name="submit" required="" placeholder="SUBMIT">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>
