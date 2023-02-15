@@ -324,59 +324,6 @@
       }
     }
 
-    /* Events */
-    .event-container {
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #f7f7f7;
-    }
-
-    .event-container {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 5px;
-      box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
-    }
-
-    .event-container>form {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .event-container>label {
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
-
-    .event-container>input[type="text"],
-    .event-container>textarea {
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      padding: 10px;
-      margin-bottom: 20px;
-      font-size: 16px;
-    }
-
-    .event-container>input[type="checkbox"] {
-      margin-right: 10px;
-    }
-
-    .event-container>input[type="submit"] {
-      background-color: #008cba;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .event-container>input[type="submit"]:hover {
-      background-color: #0077a3;
-    }
-
-
 
     /* Footer */
     @import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:300);
@@ -412,6 +359,23 @@
       display: flex;
       height: min-content;
     }
+
+    .events {
+      height: 480px;
+      overflow: auto;
+    }
+
+    .one>.maincontent {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-around;
+      height: 568px;
+    }
+
+    #sep {
+      background-color: transparent;
+      height: 10px;
+    }
   </style>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
@@ -425,26 +389,42 @@
       <a href="#two" class="navbar">About</a>
       <a href="#three" class="navbar">Contact</a>
     </nav>
-
-
-
     <div class="maincontent">
       <div class="events">
-        <div class="event-container" style="font-size: 16px">
-          <form action="" method="post">
-            <label for="email_to">To:</label>
-            <input type="text" name="email_to" id="email_to" required />
-            <label for="email_subject">Subject:</label>
-            <input type="text" name="email_subject" id="email_subject" required />
-            <label for="email_message">Message:</label>
-            <textarea name="email_message" id="email_message" required></textarea>
-            <input type="submit" value="Send Email" id="submit" />
-          </form>
-        </div>
+        <div class="card" style="width: 18rem;">
+          <?php
 
+          $conn = new mysqli("localhost", "sam", "", "sam");
+
+          $sql = "SELECT * FROM events";
+
+          $result = $conn->query($sql);
+
+          if (!$result) {
+            die("Invalid query" . $conn->error);
+          }
+
+          while ($row = $result->fetch_assoc()) {
+
+
+            echo "
+            <div class='card-body'>
+              <h5 class='card-title'>$row[event_name]</h5>
+              <p class='card-text'>$row[description]</p>
+              <p class='card-text'>$row[location]</p>
+              <p class='card-text'>$row[date], $row[time]</p>
+            </div>
+            <div id='sep'>
+            <hr>
+            </div>
+          ";
+          }
+
+          ?>
+        </div>
       </div>
       <div class="chats">
-        <iframe src="http://localhost:8080" frameborder="3"></iframe>
+        <iframe src="http://localhost:8080" width="400" height="480" frameborder="1"></iframe>
       </div>
     </div>
 

@@ -131,7 +131,7 @@
 
         footer {
             padding-top: 0;
-            background-color: #292c2f;
+            background-color: #4F5254;
             color: #bbb;
         }
     </style>
@@ -139,11 +139,11 @@
 </head>
 
 <body>
-    <div class="page" id="two">
+    <div class="page" id="three">
         <nav>
             <img src="mh1.png" alt="logo" class="navlogo" />
             <a href="adminpage.php" class="navbar">Home</a>
-            <a href="search.php" class="navbar">Search</a>
+            <a href="aSearch.php" class="navbar">Search</a>
             <a href="#three" class="navbar">DataBase</a>
 
         </nav>
@@ -202,6 +202,17 @@
             </table>
         </div>
     </div>
+    <footer class="footer">
+        <br>
+        <div class="content">
+            <p align="center">&copy; 2023 Nirman -Web Wizards</p>
+        </div>
+        </div>
+        </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 
 </html>

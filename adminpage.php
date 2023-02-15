@@ -130,6 +130,62 @@
     }
 
 
+
+    /* Events */
+    .event-container {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f7f7f7;
+    }
+
+    .event-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+    }
+
+    .event-container>form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .event-container>label {
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .event-container>input[type="text"],
+    .event-container>textarea {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    .event-container>input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    .event-container>input[type="submit"] {
+      background-color: #008cba;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .event-container>input[type="submit"]:hover {
+      background-color: #0077a3;
+    }
+
+
+
+
     /* Footer */
     @import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:300);
 
@@ -164,10 +220,10 @@
     <nav>
       <img src="mh1.png" alt="logo" class="navlogo" />
       <a href="#one" class="navbar">Home</a>
-      <a href="search.php" class="navbar">Search</a>
-      <a href="cofigure.php#two" class="navbar">DataBase</a>
+      <a href="aSearch.php#two" class="navbar">Search</a>
+      <a href="cofigure.php#three" class="navbar">DataBase</a>
     </nav>
-    <div class="card text-center" style="display: flex;justify-content: center;align-self: center;margin-top: 50px;">
+    <div class="card text-center" style="display: block;justify-content: center;align-items: center;margin:auto;width:601px;height:200px;margin-top: 40px;">
       <div class="card-header">
         Featured
       </div>
@@ -179,6 +235,18 @@
       <div class="card-footer text-muted">
 
       </div>
+    </div>
+    <div style="background-color: transparent; height: 10px; margin:auto;"></div>
+    <div class="event-container" style="font-size: 16px">
+      <form action="" method="post">
+        <label for="email_to">To:</label>
+        <input type="text" name="email_to" id="email_to" required />
+        <label for="email_subject">Subject:</label>
+        <input type="text" name="email_subject" id="email_subject" required />
+        <label for="email_message">Message:</label>
+        <textarea name="email_message" id="email_message" required></textarea>
+        <input type="submit" value="Send Email" id="submit" />
+      </form>
     </div>
   </div>
 
