@@ -263,7 +263,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             font-family: Arial, Helvetica, sans-serif;
           ">Click here for admin login!</a><br />
       <label for="username">Username:</label>
-      <input type="text" id="username" value="<?php $uname ?>" name="username" />
+      <input type="text" id="username" value="<?php $uname ?>" name="username" autocomplete="off" />
       <label for="password">Password:</label>
       <input type="password" id="password" value="<?php $pass ?>" name="password" />
       <div id="lower">

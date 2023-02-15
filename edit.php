@@ -288,7 +288,10 @@ $data = $conn->query($query);
 
 if ($data) {
     // echo "<script>alert('Record updated!')</script>";
-    header("location: /WebWizards/cofigure.php");
+    // header("location: /WebWizards_Git/adminpage.php");
+?>
+    <!-- <META HTTP-EQUIV="Refresh" CONTENT="0; URL=http://localhost/WebWizards_Git/adminpage.php"> -->
+<?php
 } else {
     echo "<script>alert('Failed to Update!')</script>";
 }

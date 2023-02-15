@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
   $gradyear = "";
   $stream = "";
 
-  header("location: /WebWizards/index.php");
+  header("location: /WebWizards_Git/index.php");
 }
 
 

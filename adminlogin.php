@@ -261,9 +261,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <b>Admin Login:</b>
       </p>
       <label for="username">Username:</label>
-      <input type="text" id="username" value="<?php $uname ?>" name="username" />
+      <input type="text" id="username" value="<?php $uname ?>" name="username" autocomplete="off" />
       <label for="password">Password:</label>
-      <input type="password" id="password" value="<?php $pass ?>" name="password" />
+      <input type="password" id="password" value="<?php $pass ?>" name="password" required />
       <div id="lower">
         <input type="submit" value="Login" />
       </div>

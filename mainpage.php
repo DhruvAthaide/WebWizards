@@ -84,15 +84,81 @@
 
     /* Pages End */
 
-    /* Contact */
-    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
-    .contactpage {
+    /* About */
+    #two>.maincontent {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: "Poppins", sans-serif;
-      min-height: 100vh;
+      min-height: 82vh;
+      width: 100%;
+      background: #A9AAA9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .about-us {
+      height: 100vh;
+      width: 1155px;
+      padding: 5px 0;
+      background: #ddd;
+      /* display: flex;
+      align-items: center;
+      justify-content: center; */
+      text-align: center;
+      margin: auto;
+      /* margin-left: 400px; */
+    }
+
+    /*.pic{}*/
+    .about {
+      width: 1130px;
+      max-width: 85%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .text {
+      width: 95%;
+    }
+
+    .text h2 {
+      font-size: 90px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .text h5 {
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    span {
+      color: #4070f4;
+    }
+
+    .text p {
+      font-size: 18px;
+      line-height: 25px;
+      letter-spacing: 1px;
+    }
+
+
+    /* Contact */
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+    #three>.maincontent {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+      min-height: 82vh;
       width: 100%;
       background: #A9AAA9;
       display: flex;
@@ -266,8 +332,8 @@
     }
 
     .footer {
-      position: absolute;
-      bottom: 0;
+      /* position: absolute;
+      bottom: 0; */
       height: 0px;
       align-items: center;
       width: 100%;
@@ -281,142 +347,169 @@
       background-color: #4F5254;
       color: #bbb;
     }
+
+    .one>.navbar {
+      /* position: absolute;
+      bottom: 0; */
+      height: 0px;
+      align-items: center;
+      width: 100%;
+      justify-content: center;
+      display: flex;
+      height: min-content;
+    }
   </style>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
-<body style="background-color: #A9AAA9;">
-<!-- Page 1-Home -->
-<div class="one">
-  <nav>
-    <img src="mh1.png" alt="logo" class="navlogo" />
-    <a href="#one" class="navbar">Home</a>
-    <a href="#two" class="navbar">About</a>
-    <a href="#three" class="navbar">Contact</a>
-  </nav>
-  <ul>
-    <li><a href="#">Back</a></li>
-    <li><a href="#two">Page 2</a></li>
-  </ul>
-  <!-- Footer -->
-  <footer class="footer">
-    <br>
-    <div class="content">
-      <p align="center">&copy; 2023 Nirman -Web Wizards</p>
-    </div>
-</div>
-</div>
-</div>
-</footer>
-</div>
 
-<!-- Page 2-About -->
-<div class="page" id="two">
-  <nav>
-    <img src="mh1.png" alt="logo" class="navlogo" />
-    <a href="#one" class="navbar">Home</a>
-    <a href="#two" class="navbar">About</a>
-    <a href="#three" class="navbar">Contact</a>
-  </nav>
-  Content of page 2 goes here.
-  <!-- Footer -->
-  <footer class="footer">
-    <br>
-    <div class="content">
-      <p align="center">&copy; 2023 Nirman -Web Wizards</p>
-    </div>
-</div>
-</div>
-</div>
-</footer>
-</div>
+<body>
+  <!-- Page 1-Home -->
+  <div class="one" style="background-color: #A9AAA9;">
+    <nav>
+      <img src="mh1.png" alt="logo" class="navlogo" />
+      <a href="#one" class="navbar">Home</a>
+      <a href="#two" class="navbar">About</a>
+      <a href="#three" class="navbar">Contact</a>
+    </nav>
 
-<!-- Page 3-Contact -->
-<div class="page" id="three">
-  <nav>
-    <img src="mh1.png" alt="logo" class="navlogo" />
-    <a href="#one" class="navbar">Home</a>
-    <a href="#two" class="navbar">About</a>
-    <a href="#three" class="navbar">Contact</a>
-  </nav>
-  <div class="contactpage">
-    <div class="container">
+    <div class="maincontent"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <br>
       <div class="content">
-        <div class="left-side">
-          <div class="address details">
-            <i class="fas fa-map-marker-alt"></i>
-            <div class="topic">Address</div>
-            <div class="text-one">Amity Mumbai</div>
-            <div class="text-two">Bhatan Mumbai Pune Expressway</div>
-          </div>
-          <div class="phone details">
-            <i class="fas fa-phone-alt"></i>
-            <div class="topic">Phone</div>
-            <div class="text-one">+91 9320693337</div>
-            <div class="text-two">+91 9372660546</div>
-          </div>
-          <div class="email details">
-            <i class="fas fa-envelope"></i>
-            <div class="topic">Email</div>
-            <div class="text-one">webwizards@gmail.com</div>
-            <div class="text-two">nirman@gmail.com</div>
+        <p align="center">&copy; 2023 Nirman -Web Wizards</p>
+      </div>
+  </div>
+  </footer>
+
+  <!-- Page 2-About -->
+  <div class="page" id="two" style="background-color: #A9AAA9;">
+    <nav>
+      <img src="mh1.png" alt="logo" class="navlogo" />
+      <a href="#one" class="navbar">Home</a>
+      <a href="#two" class="navbar">About</a>
+      <a href="#three" class="navbar">Contact</a>
+    </nav>
+
+    <div class="maincontent">
+      <section class="about-us">
+        <div class="about">
+          <!--<img src="girl.png" class="pic">-->
+          <div class="text">
+            <h2>About Us</h2>
+            <h5>Front-end Developers & <span>Designers</span></h5>
+            <p>Welcome to our team's about us section! We are a group of skilled and passionate coders who have come together to create an exceptional
+              website that boasts both front-end and back-end development.
+              Our team is composed of talented individuals with diverse backgrounds, including computer science, software engineering, and web development.
+              With years of experience under our belts, we have honed our skills in a range of programming languages, including JavaScript, HTML, CSS, Python, PHP, and more.<br>
+              Our goal is to create a seamless user experience by designing an intuitive and aesthetically pleasing front-end that caters to our users' needs.
+              We believe that the front-end is a critical component of any website, and we strive to create a visually stunning and engaging interface that is user-friendly and functional.
+              On the back-end, our team's expertise lies in developing robust and scalable systems that support our website's core functionality. <br>
+              We are proficient in building APIs, integrating databases, managing servers, and ensuring that our website runs smoothly and efficiently.
+              Our team's commitment to excellence is reflected in the quality of our work. <br>
+              We approach every project with attention to detail, dedication, and creativity, ensuring that our website stands out from the rest. Our work is a reflection of our passion for coding and our desire to create the best possible user experience.
+              We are proud of the work we have done, and we look forward to taking on new challenges in the future.
+              Thank you for considering our team for your next web development project.</p>
           </div>
         </div>
-        <div class="right-side">
-          <div class="topic-text">Send us a message</div>
-          <form id="myform" method="post"
-            action="https://script.google.com/macros/s/AKfycbw64ay3jQ29EtPS5l7-IINyEp0tSY3vJ0Ur01q4_NUwLB0hhzDeqRY545Hkku05iGMHAg/exec">
-            <div class="input-box">
-              <input type="text" placeholder="Enter your name" id="full_name" name="full_name" required>
+      </section>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+      <br>
+      <div class="content">
+        <p align="center">&copy; 2023 Nirman -Web Wizards</p>
+      </div>
+  </div>
+  </footer>
+
+  <!-- Page 3-Contact -->
+  <div class="page" id="three" style="background-color: #A9AAA9;">
+    <nav>
+      <img src="mh1.png" alt="logo" class="navlogo" />
+      <a href="#one" class="navbar">Home</a>
+      <a href="#two" class="navbar">About</a>
+      <a href="#three" class="navbar">Contact</a>
+    </nav>
+    <div class="maincontent">
+      <div class="container">
+        <div class="content">
+          <div class="left-side">
+            <div class="address details">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="topic">Address</div>
+              <div class="text-one">Amity Mumbai</div>
+              <div class="text-two">Bhatan Mumbai Pune Expressway</div>
             </div>
-            <div class="input-box">
-              <input type="text" placeholder="Enter your email" id="full_email" name="full_email" required>
+            <div class="phone details">
+              <i class="fas fa-phone-alt"></i>
+              <div class="topic">Phone</div>
+              <div class="text-one">+91 9320693337</div>
+              <div class="text-two">+91 9372660546</div>
             </div>
-            <div class="input-box message-box">
-              <input type="text" placeholder="Enter your Message" id="full_message" name="full_message" required>
+            <div class="email details">
+              <i class="fas fa-envelope"></i>
+              <div class="topic">Email</div>
+              <div class="text-one">webwizards@gmail.com</div>
+              <div class="text-two">nirman@gmail.com</div>
             </div>
-            <div class="button">
-              <input type="submit" class="submit-finalbtn" name="submit" required="" placeholder="SUBMIT">
-            </div>
-          </form>
+          </div>
+          <div class="right-side">
+            <div class="topic-text">Send us a message</div>
+            <form id="myform" method="post" action="https://script.google.com/macros/s/AKfycbw64ay3jQ29EtPS5l7-IINyEp0tSY3vJ0Ur01q4_NUwLB0hhzDeqRY545Hkku05iGMHAg/exec">
+              <div class="input-box">
+                <input type="text" placeholder="Enter your name" id="full_name" name="full_name" required>
+              </div>
+              <div class="input-box">
+                <input type="text" placeholder="Enter your email" id="full_email" name="full_email" required>
+              </div>
+              <div class="input-box message-box">
+                <input type="text" placeholder="Enter your Message" id="full_message" name="full_message" required>
+              </div>
+              <div class="button">
+                <input type="submit" class="submit-finalbtn" name="submit" required="" placeholder="SUBMIT">
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <br>
+      <div class="content">
+        <p align="center">&copy; 2023 Nirman -Web Wizards</p>
+      </div>
   </div>
-  <!-- Footer -->
-  <footer class="footer">
-    <br>
-    <div class="content">
-      <p align="center">&copy; 2023 Nirman -Web Wizards</p>
-    </div>
-</div>
-</div>
-</div>
-</footer>
-</div>
+  </div>
+  </div>
+  </footer>
+  </div>
 
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-<script>
-  // Form Submition Code
-  var $form = $('form#test-form'),
-    url = 'https://script.google.com/macros/s/AKfycbwTVyK2PUBa1wys5WBpD-H81tutzxw6-463RWPFkmtv8OVoN573TEZJYpXESCkm9HlHWw/exec'
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <script>
+    // Form Submition Code
+    var $form = $('form#test-form'),
+      url = 'https://script.google.com/macros/s/AKfycbwTVyK2PUBa1wys5WBpD-H81tutzxw6-463RWPFkmtv8OVoN573TEZJYpXESCkm9HlHWw/exec'
 
-  $('#submit-form').on('click', function (e) {
-    e.preventDefault();
-    var jqxhr = $.ajax({
-      url: url,
-      method: "GET",
-      dataType: "json",
-      data: $form.serializeObject()
-    }).success(
-      // do something
-    );
-  })
-</script>
+    $('#submit-form').on('click', function(e) {
+      e.preventDefault();
+      var jqxhr = $.ajax({
+        url: url,
+        method: "GET",
+        dataType: "json",
+        data: $form.serializeObject()
+      }).success(
+        // do something
+      );
+    })
+  </script>
 </body>
 
 </html>

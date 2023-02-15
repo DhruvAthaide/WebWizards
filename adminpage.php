@@ -84,6 +84,51 @@
 
     /* Pages End */
 
+    /* Search Button Page 3 */
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+    .search {
+      width: 40%;
+      position: relative;
+      display: flex;
+    }
+
+    .searchTerm {
+      width: 100%;
+      border: 3px solid #000770;
+      border-right: none;
+      padding: 5px;
+      height: 36px;
+      border-radius: 5px 0 0 5px;
+      outline: none;
+      color: #9DBFAF;
+    }
+
+    .searchTerm:focus {
+      color: #000770;
+    }
+
+    .searchButton {
+      height: 36px;
+      width: auto;
+      border: 1px solid #000770;
+      background: #000770;
+      text-align: center;
+      color: #fff;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    /*Resize the wrap to see the search bar change!*/
+    .wrap {
+      width: 38%;
+      position: absolute;
+      top: 15%;
+      left: 95%;
+      transform: translate(-50%, -50%);
+    }
+
 
     /* Footer */
     @import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:300);
@@ -119,7 +164,7 @@
     <nav>
       <img src="mh1.png" alt="logo" class="navlogo" />
       <a href="#one" class="navbar">Home</a>
-      <a href="./cofigure.php" class="navbar">DataBase</a>
+      <a href="cofigure.php#two" class="navbar">DataBase</a>
     </nav>
     <div class="card text-center" style="display: flex;justify-content: center;align-self: center;margin-top: 50px;">
       <div class="card-header">
@@ -135,76 +180,6 @@
       </div>
     </div>
   </div>
-
-  <!-- Page 2-DataBase -->
-  <div class="page" id="two" style="background-color: #A9AAA9;">
-    <nav>
-      <img src="mh1.png" alt="logo" class="navlogo" />
-      <a href="#one" class="navbar">Home</a>
-      <a href="#two" class="navbar">DataBase</a>
-    </nav>
-    <div class="wrap">
-      <div class="search">
-        <input type="text" class="searchTerm" placeholder="What are you looking for?">
-        <button type="submit" class="searchButton">
-          <i class="fa fa-search"></i>
-        </button>
-      </div>
-    </div>
-    <div class="tabledata" style="overflow: auto;  height: 60%;">
-      <table align="center" class="table">
-        <thead>
-          <th>Sno</th>
-          <th>Username</th>
-          <th>Email</th>
-          <th>GradYear</th>
-          <th>Stream</th>
-          <th>Actions</th>
-        </thead>
-        <?php
-        $servername = "localhost";
-        $username = "sam";
-        $password = "";
-        $dbname = "sam";
-
-        $uname = "";
-        $pass = "";
-
-        mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-
-        $conn = new mysqli($servername, $username, $password, $dbname);
-
-        if ($conn->connect_error) {
-          die("Connection Failed: " . $conn->connect_error);
-        }
-
-        $sql = "SELECT * FROM data";
-        $result = $conn->query($sql);
-
-        if (!$result) {
-          die("Invalid query" . $conn->error);
-        }
-
-        while ($row = $result->fetch_assoc()) {
-          echo "<tr>
-        <td>$row[sno]</td>
-        <td>$row[Username]</td>
-        <td>$row[Email]</td>
-        <td>$row[gradYear]</td>
-        <td>$row[Stream]</td>
-        <td>
-          <a class='btn btn-primary btn-sm' href='/WebWizards/edit.php?sno=$row[sno]&uname=$row[Username]&email=$row[Email]&gY=$row[gradYear]&st=$row[Stream]'>Edit</a>
-          <a class='btn btn-danger btn-sm' href='/WebWizards/delete.php?sno=$row[sno]'>Delete</a>
-        </td>
-        </tr>";
-        }
-
-        ?>
-      </table>
-    </div>
-  </div>
-
-
 
 
   <footer class="footer">
