@@ -51,9 +51,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
       width: 100%;
       height: 100%;
       font-family: "Helvetica Neue", Helvetica, sans-serif;
-      color: #000770;
+      color: #0A2540;
       -webkit-font-smoothing: antialiased;
-      background: #A9AAA9;
+      background: #DADADA;
     }
 
     #container {
@@ -76,7 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     }
 
     label {
-      color: #555;
+      color: #0A2540;
       display: inline-block;
       margin-left: 18px;
       padding-top: 10px;
@@ -107,7 +107,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     input[type="text"],
     input[type="password"],
     input[type="time"] {
-      color: #000770;
+      color: #0A2540;
       padding-left: 10px;
       margin: 10px;
       margin-top: 12px;
@@ -239,7 +239,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
     footer {
       padding-top: 0;
-      background-color: #292c2f;
+      background-color: #4F5254;
       color: #bbb;
     }
   </style>
@@ -247,7 +247,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 </head>
 
-<body style="background-color: #A9AAA9;">
+<body style="background-color: #DADADA;">
   <div id="container">
     <form action="" method="post">
       <p style="

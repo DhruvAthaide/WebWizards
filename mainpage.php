@@ -27,7 +27,7 @@
     .navbar {
       position: relative;
       text-decoration: none;
-      color: #222;
+      color: #0A2540;
       font-size: 18px;
       letter-spacing: 5px;
       padding: 0 20px;
@@ -40,7 +40,7 @@
       position: absolute;
       height: 3px;
       width: 0;
-      background: #000770;
+      background: #0A2540;
       transition: 0.5s;
     }
 
@@ -93,7 +93,7 @@
       font-family: "Poppins", sans-serif;
       min-height: 82vh;
       width: 100%;
-      background: #A9AAA9;
+      background: #DADADA;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -160,7 +160,7 @@
       font-family: "Poppins", sans-serif;
       min-height: 82vh;
       width: 100%;
-      background: #A9AAA9;
+      background: #DADADA;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -200,7 +200,7 @@
       right: -15px;
       top: 50%;
       transform: translateY(-50%);
-      background: #afafb6;
+      background: #DADADA;
     }
 
     .content .left-side .details {
@@ -210,7 +210,7 @@
 
     .content .left-side .details i {
       font-size: 30px;
-      color: #000770;
+      color: #0A2540;
       margin-bottom: 10px;
     }
 
@@ -233,7 +233,7 @@
     .content .right-side .topic-text {
       font-size: 23px;
       font-weight: 600;
-      color: #000770;
+      color: #0A2540;
     }
 
     .right-side .input-box {
@@ -275,7 +275,7 @@
       border: none;
       padding: 8px 16px;
       border-radius: 6px;
-      background: #000770;
+      background: #0A2540;
       cursor: pointer;
       transition: all 0.3s ease;
     }
@@ -322,6 +322,59 @@
         width: 100%;
         margin-left: 0;
       }
+    }
+
+
+    /* Events */
+    .event-container {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f7f7f7;
+    }
+
+    .event-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+    }
+
+    .event-container>form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .event-container>label {
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .event-container>input[type="text"],
+    .event-container>textarea {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    .event-container>input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    .event-container>input[type="submit"] {
+      background-color: #008cba;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .event-container>input[type="submit"]:hover {
+      background-color: #0077a3;
     }
 
 
@@ -438,7 +491,7 @@
   </footer>
 
   <!-- Page 2-About -->
-  <div class="page" id="two" style="background-color: #A9AAA9;">
+  <div class="page" id="two" style="background-color: #DADADA;">
     <nav>
       <img src="mh1.png" alt="logo" class="navlogo" />
       <a href="#one" class="navbar">Home</a>
@@ -481,7 +534,7 @@
   </footer>
 
   <!-- Page 3-Contact -->
-  <div class="page" id="three" style="background-color: #A9AAA9;">
+  <div class="page" id="three" style="background-color: #DADADA;">
     <nav>
       <img src="mh1.png" alt="logo" class="navlogo" />
       <a href="#one" class="navbar">Home</a>

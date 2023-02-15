@@ -34,7 +34,7 @@ if (isset($_POST["submit"])) {
   <style>
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background-color: #f7f7f7;
+      background-color: #DADADA;
     }
 
     .container {
@@ -93,7 +93,6 @@ if (isset($_POST["submit"])) {
 </head>
 
 <body>
-  <!-- Put the add_event.php in action -->
   <div class="container" style="font-size: 16px">
     <form action="" method="post">
       <label for="event_name">Event Name:</label>

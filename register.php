@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
       font-family: "Helvetica Neue", Helvetica, sans-serif;
       color: #444;
       -webkit-font-smoothing: antialiased;
-      background: #f0f0f0;
+      background: #DADADA;
     }
 
     #container {
@@ -80,7 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     }
 
     label {
-      color: #555;
+      color: #0A2540;
       display: inline-block;
       margin-left: 18px;
       padding-top: 10px;
@@ -89,7 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
     p a {
       font-size: 11px;
-      color: #aaa;
+      color: #0A2540;
       float: right;
       margin-top: -13px;
       margin-right: 20px;
@@ -113,7 +113,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     input[type="text"],
     input[type="password"],
     input[type="time"] {
-      color: #777;
+      color: #0A2540;
       padding-left: 10px;
       margin: 10px;
       margin-top: 8px;
@@ -256,7 +256,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 
-<body style="background-color: #A9AAA9;">
+<body style="background-color: #DADADA;">
   <div id="container">
     <form action="" method="post">
       <p style="

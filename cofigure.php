@@ -27,7 +27,7 @@
         .navbar {
             position: relative;
             text-decoration: none;
-            color: #222;
+            color: #0A2540;
             font-size: 18px;
             letter-spacing: 5px;
             padding: 0 20px;
@@ -40,7 +40,7 @@
             position: absolute;
             height: 3px;
             width: 0;
-            background: orangered;
+            background: #0A2540;
             transition: 0.5s;
         }
 
@@ -76,7 +76,7 @@
 
         .searchTerm {
             width: 100%;
-            border: 3px solid #000770;
+            border: 3px solid #0A2540;
             border-right: none;
             padding: 5px;
             height: 36px;
@@ -86,14 +86,14 @@
         }
 
         .searchTerm:focus {
-            color: #000770;
+            color: #0A2540;
         }
 
         .searchButton {
             height: 36px;
             width: auto;
-            border: 1px solid #000770;
-            background: #000770;
+            border: 1px solid #0A2540;
+            background: #0A2540;
             text-align: center;
             color: #fff;
             border-radius: 0 5px 5px 0;
@@ -138,8 +138,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
 </head>
 
-<body>
-    <div class="page" id="three">
+<body style="background-color:#DADADA">
+    <div class="page" id="three" style="background-color:#DADADA">
         <nav>
             <img src="mh1.png" alt="logo" class="navlogo" />
             <a href="adminpage.php" class="navbar">Home</a>

@@ -52,7 +52,7 @@ $query = "SELECT * FROM data where sno='$sno'"
         }
 
         label {
-            color: #555;
+            color: #0A2540;
             display: inline-block;
             margin-left: 18px;
             padding-top: 10px;
@@ -61,7 +61,7 @@ $query = "SELECT * FROM data where sno='$sno'"
 
         p a {
             font-size: 11px;
-            color: #aaa;
+            color: #0A2540;
             float: right;
             margin-top: -13px;
             margin-right: 20px;
@@ -85,14 +85,14 @@ $query = "SELECT * FROM data where sno='$sno'"
         input[type="text"],
         input[type="password"],
         input[type="time"] {
-            color: #777;
+            color: #0A2540;
             padding-left: 10px;
             margin: 10px;
             margin-top: 8px;
             margin-left: 18px;
             width: 290px;
             height: 35px;
-            border: 1px solid #c7d0d2;
+            border: 1px solid #1ca5b4;
             border-radius: 2px;
             box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, 0.4),
                 0 0 0 5px #f5f7f8;
@@ -122,10 +122,10 @@ $query = "SELECT * FROM data where sno='$sno'"
         }
 
         #lower {
-            background: #ecf2f5;
+            background: #DADADA;
             width: 100%;
             height: 69px;
-            margin-top: 10px;
+            margin-top: 42px;
             box-shadow: inset 0 1px 1px #fff;
             border-top: 1px solid #ccc;
             border-bottom-right-radius: 3px;
@@ -145,14 +145,15 @@ $query = "SELECT * FROM data where sno='$sno'"
         }
 
         input[type="submit"] {
-            float: right;
+            /* float: right; */
             margin-right: 20px;
             margin-top: 20px;
+            margin-left: 120px;
             width: 80px;
             height: 30px;
             font-size: 14px;
             font-weight: bold;
-            color: #fff;
+            color: #2e5071;
             background-color: #acd6ef;
             /*IE fallback*/
             background-image: -webkit-gradient(linear,
@@ -206,6 +207,7 @@ $query = "SELECT * FROM data where sno='$sno'"
 
         body {
             font-family: 'Alegreya Sans', sans-serif;
+            color: #0A2540;
         }
 
         .footer {
@@ -221,14 +223,14 @@ $query = "SELECT * FROM data where sno='$sno'"
 
         footer {
             padding-top: 0;
-            background-color: #292c2f;
+            background-color: #4F5254;
             color: #bbb;
         }
     </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 
-<body>
+<body style="background-color:#DADADA">
     <div id="container">
         <form action="" method="post">
             <p style="
@@ -236,7 +238,7 @@ $query = "SELECT * FROM data where sno='$sno'"
             font-size: 15px;
             font-family: Arial, Helvetica, sans-serif;
           ">
-                <b>Update:</b>
+                <b style="margin-left: 110px;">Update:</b>
             </p>
 
             <input type="text" name="sno" value="<?php echo $sno; ?>">
