@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $servername = "localhost";
 $username = "sam";
 $password = "";
@@ -28,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 
   if ($res >= 1) {
-    $_SESSION['auth'] = 'true';
+    $_SESSION['user_name'] = $uname;
     header("location: mainpage.php#one");
 
     $pass = "";

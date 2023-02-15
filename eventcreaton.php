@@ -1,5 +1,14 @@
 <?php
 
+session_start();
+
+$admin_prof = $_SESSION['adm'];
+
+if ($admin_prof == true) {
+} else {
+  header('location:index.php');
+}
+
 $servername = "localhost";
 $username = "sam";
 $password = "";
@@ -19,7 +28,7 @@ if (isset($_POST["submit"])) {
 
   $conn->query($query);
 
-  header("location: /adminpage.php");
+  header("location:adminpage.php");
 }
 
 ?>

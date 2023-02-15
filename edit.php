@@ -1,5 +1,14 @@
 <?php
 
+session_start();
+
+$admin_prof = $_SESSION['adm'];
+
+if ($admin_prof == true) {
+} else {
+    header('location:index.php');
+}
+
 require("cofigure.php");
 error_reporting(0);
 $sno = $_GET['sno'];

@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+$userprofile = $_SESSION['user_name'];
+
+if ($userprofile == true) {
+} else {
+  header('location:index.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -441,11 +453,14 @@
       <a href="#one" class="navbar">Home</a>
       <a href="#two" class="navbar">About</a>
       <a href="#three" class="navbar">Contact</a>
+      <a href="logout.php" class="btn btn-danger">Logout</a>
     </nav>
     <div class="maincontent">
       <div class="events">
         <div class="card" style="width: 18rem;">
           <?php
+
+
 
           $conn = new mysqli("localhost", "sam", "", "sam");
 
@@ -497,6 +512,7 @@
       <a href="#one" class="navbar">Home</a>
       <a href="#two" class="navbar">About</a>
       <a href="#three" class="navbar">Contact</a>
+      <a href="logout.php" class="btn btn-danger">Logout</a>
     </nav>
 
     <div class="maincontent">
@@ -540,6 +556,7 @@
       <a href="#one" class="navbar">Home</a>
       <a href="#two" class="navbar">About</a>
       <a href="#three" class="navbar">Contact</a>
+      <a href="logout.php" class="btn btn-danger">Logout</a>
     </nav>
     <div class="maincontent">
       <div class="container">

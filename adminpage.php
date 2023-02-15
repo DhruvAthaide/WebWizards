@@ -1,3 +1,16 @@
+<?php
+
+session_start();
+
+$admin_prof = $_SESSION['adm'];
+
+if ($admin_prof == true) {
+} else {
+  header('location:index.php');
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -222,6 +235,7 @@
       <a href="#one" class="navbar">Home</a>
       <a href="aSearch.php#two" class="navbar">Search</a>
       <a href="cofigure.php#three" class="navbar">DataBase</a>
+      <a href="logout.php" class="btn btn-danger">Logout</a>
     </nav>
     <div class="card text-center" style="display: block;justify-content: center;align-items: center;margin:auto;width:601px;height:200px;margin-top: 40px;">
       <div class="card-header">
@@ -245,7 +259,7 @@
         <input type="text" name="email_subject" id="email_subject" required />
         <label for="email_message">Message:</label>
         <textarea name="email_message" id="email_message" required></textarea>
-        <input type="submit" value="Send Email" id="submit" />
+        <input type="submit" name="submit" value="submit" id="submit" />
       </form>
     </div>
   </div>

@@ -1,4 +1,15 @@
-<?php $servername = "localhost";
+<?php
+
+session_start();
+
+$admin_prof = $_SESSION['adm'];
+
+if ($admin_prof == true) {
+} else {
+    header('location:index.php');
+}
+
+$servername = "localhost";
 $username = "sam";
 $password = "";
 $dbname = "sam";

@@ -1,3 +1,16 @@
+<?php
+
+session_start();
+
+$admin_prof = $_SESSION['adm'];
+
+if ($admin_prof == true) {
+} else {
+    header('location:index.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -118,6 +131,7 @@
             <a href="adminpage.php#one" class="navbar">Home</a>
             <a href="#two" class="navbar">Search</a>
             <a href="adminpage.php#two" class="navbar">DataBase</a>
+            <a href="logout.php" class="btn btn-danger">Logout</a>
         </nav>
         <div style="display:flex; justify-content:center; width:100%; text-align:center;">
             <form action="aSearch.php" method="post">
