@@ -1,3 +1,44 @@
+<?php
+
+$servername = "localhost";
+$username = "sam";
+$password = "";
+$dbname = "sam";
+
+$uname = "";
+$pass = "";
+
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+  $uname = $_POST['username'];
+  $pass = $_POST['password'];
+
+  $query = "SELECT * from data where Username='$uname' and Password='$pass'";
+
+  $stmt = $conn->prepare($query);
+  $stmt->execute();
+
+  $stmt->store_result();
+
+  $res = $stmt->num_rows;
+
+
+  if ($res >= 1) {
+    $_SESSION['auth'] = 'true';
+    header("location: mainpage.php");
+
+    $pass = "";
+    $uname = "";
+  } else {
+  }
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -10,9 +51,9 @@
       width: 100%;
       height: 100%;
       font-family: "Helvetica Neue", Helvetica, sans-serif;
-      color: #444;
+      color: #000770;
       -webkit-font-smoothing: antialiased;
-      background: #f0f0f0;
+      background: #A9AAA9;
     }
 
     #container {
@@ -44,7 +85,7 @@
 
     p a {
       font-size: 11px;
-      color: #aaa;
+      color: #000770;
       float: right;
       margin-top: -13px;
       margin-right: 20px;
@@ -54,7 +95,7 @@
     }
 
     p a:hover {
-      color: #555;
+      color: #000770;
     }
 
     input {
@@ -66,7 +107,7 @@
     input[type="text"],
     input[type="password"],
     input[type="time"] {
-      color: #777;
+      color: #000770;
       padding-left: 10px;
       margin: 10px;
       margin-top: 12px;
@@ -102,15 +143,11 @@
       background: #ecf2f5;
       width: 100%;
       height: 69px;
-      margin-top: 44px;
-      box-shadow: inset 0 1px 1px #fff;
+      margin-top: 20px;
+      box-shadow: inset 0 1px 1px #A9AAA9;
       border-top: 1px solid #ccc;
       border-bottom-right-radius: 3px;
       border-bottom-left-radius: 3px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding-bottom: 25px;
     }
 
     input[type="checkbox"] {
@@ -182,7 +219,6 @@
           #b6e2ff 100%);
     }
 
-
     /* Footer */
     @import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:300);
 
@@ -191,24 +227,24 @@
     }
 
     .footer {
-    position: absolute;
-    bottom: 0;
-    height: 0px;
-    align-items: center;
-    width: 100%;
-    justify-content: center;
-    display: flex;
-    height: min-content;
-}
+      position: absolute;
+      bottom: 0;
+      height: 0px;
+      align-items: center;
+      width: 100%;
+      justify-content: center;
+      display: flex;
+      height: min-content;
+    }
 
     footer {
       padding-top: 0;
-      background-color: #4F5254;
+      background-color: #292c2f;
       color: #bbb;
     }
   </style>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
 </head>
 
 <body style="background-color: #A9AAA9;">
@@ -219,17 +255,31 @@
             font-size: 15px;
             font-family: Arial, Helvetica, sans-serif;
           ">
-        <b>Admin Login:</b>
+        <b>Student Login:</b>
       </p>
+      <a href="adminlogin.php" style="
+            margin-left: 16px;
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+          ">Click here for admin login!</a><br />
       <label for="username">Username:</label>
-      <input type="text" id="username" name="username" />
+      <input type="text" id="username" value="<?php $uname ?>" name="username" />
       <label for="password">Password:</label>
-      <input type="password" id="password" name="password" />
+      <input type="password" id="password" value="<?php $pass ?>" name="password" />
       <div id="lower">
+        <a href="register.php" style="
+              margin: 16px;
+              font-size: 15px;
+              font-family: Arial, Helvetica, sans-serif;
+            ">Click to Register!</a>
         <input type="submit" value="Login" />
       </div>
     </form>
   </div>
+
+
+
+
   <footer class="footer">
     <br>
     <div class="content">
@@ -239,9 +289,8 @@
     </div>
     </div>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

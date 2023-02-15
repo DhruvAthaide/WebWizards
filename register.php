@@ -1,3 +1,45 @@
+<?php
+
+$servername = "localhost";
+$username = "sam";
+$password = "";
+$dbname = "sam";
+
+$uname = "";
+$email = "";
+$pass = "";
+$gradyear = "";
+$stream = "";
+
+
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+  $sno = $_POST['sno'];
+  $uname = $_POST['username'];
+  $email = $_POST['email'];
+  $pass = $_POST['password'];
+  $gradyear = $_POST['gradyear'];
+  $stream = $_POST['stream'];
+  $que = "INSERT INTO data ( sno,Username, Email, Password, gradYear, Stream)" . "VALUES ('$sno','$uname', '$email', '$pass', '$gradyear', '$stream')";
+
+  $conn->query($que);
+
+
+
+  $uname = "";
+  $email = "";
+  $pass = "";
+  $gradyear = "";
+  $stream = "";
+
+  header("location: /WebWizards/index.php");
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -195,15 +237,15 @@
     }
 
     .footer {
-    position: absolute;
-    bottom: 0;
-    height: 0px;
-    align-items: center;
-    width: 100%;
-    justify-content: center;
-    display: flex;
-    height: min-content;
-}
+      position: absolute;
+      bottom: 0;
+      height: 0px;
+      align-items: center;
+      width: 100%;
+      justify-content: center;
+      display: flex;
+      height: min-content;
+    }
 
     footer {
       padding-top: 0;
@@ -211,8 +253,7 @@
       color: #bbb;
     }
   </style>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 
 <body style="background-color: #A9AAA9;">
@@ -226,15 +267,15 @@
         <b>Registration:</b>
       </p>
       <label for="username">Username:</label>
-      <input type="text" id="username" name="username" />
+      <input type="text" id="username" name="username" value="<?php echo $uname; ?>" />
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email" />
+      <input type="email" id="email" value="<?php echo $email ?>" name="email" />
       <label for="password">Password:</label>
-      <input type="password" id="password" name="password" />
+      <input type="password" id="password" value="<?php echo $pass; ?>" name="password" />
       <label for="year">Graduation Year:</label>
-      <input type="number" id="year" name="year" />
+      <input type="number" id="year" value="<?php echo $gradyear; ?>" name="year" />
       <label for="stream">Stream:</label>
-      <input type="text" id="stream" name="stream" />
+      <input type="text" id="stream" value="<?php echo $stream; ?>" name="stream" />
       <div id="lower">
         <input type="submit" value="Login" />
       </div>
@@ -251,11 +292,11 @@
     </div>
     </div>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
 
 </body>
 
 </html>
+
+<!-- For updating: UPDATE `data` SET `Password` = 'abcde' WHERE `data`.`sno` = 1; -->
