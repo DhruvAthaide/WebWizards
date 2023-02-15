@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
   if ($res >= 1) {
     $_SESSION['auth'] = 'true';
-    header("location: mainpage.php");
+    header("location: mainpage.php#one");
 
     $pass = "";
     $uname = "";

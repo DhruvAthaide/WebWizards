@@ -59,6 +59,10 @@
             width: 100%;
         }
 
+        .tabledata {
+            margin-top: 40px;
+        }
+
         /* NavBar Ends */
 
         /* Search Button Page 3 */
@@ -139,24 +143,11 @@
         <nav>
             <img src="mh1.png" alt="logo" class="navlogo" />
             <a href="adminpage.php" class="navbar">Home</a>
-            <a href="#two" class="navbar">DataBase</a>
-            <div class="wrap">
-                <div class="search">
-                    <input type="text" class="searchTerm" placeholder="What are you looking for?">
-                    <button type="submit" class="searchButton">
-                        <i class="fa fa-search"></i>
-                    </button>
-                </div>
-            </div>
+            <a href="search.php" class="navbar">Search</a>
+            <a href="#three" class="navbar">DataBase</a>
+
         </nav>
-        <div class="wrap">
-            <div class="search">
-                <input type="text" class="searchTerm" placeholder="What are you looking for?">
-                <button type="submit" class="searchButton">
-                    <i class="fa fa-search"></i>
-                </button>
-            </div>
-        </div>
+
         <div class="tabledata" style="overflow: auto;  height: 60%;">
             <table align="center" class="table">
                 <thead>
@@ -165,6 +156,7 @@
                     <th>Email</th>
                     <th>GradYear</th>
                     <th>Stream</th>
+                    <th>College</th>
                     <th>Actions</th>
                 </thead>
                 <?php
@@ -198,8 +190,9 @@
         <td>$row[Email]</td>
         <td>$row[gradYear]</td>
         <td>$row[Stream]</td>
+        <td>$row[college]</td>
         <td>
-          <a class='btn btn-primary btn-sm' href='/WebWizards_Git/edit.php?sno=$row[sno]&uname=$row[Username]&email=$row[Email]&gY=$row[gradYear]&st=$row[Stream]'>Edit</a>
+          <a class='btn btn-primary btn-sm' href='/WebWizards_Git/edit.php?sno=$row[sno]&uname=$row[Username]&email=$row[Email]&gY=$row[gradYear]&st=$row[Stream]&cl=$row[college]'>Edit</a>
           <a class='btn btn-danger btn-sm' href='/WebWizards_Git/delete.php?sno=$row[sno]'>Delete</a>
         </td>
         </tr>";

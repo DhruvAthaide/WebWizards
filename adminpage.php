@@ -164,6 +164,7 @@
     <nav>
       <img src="mh1.png" alt="logo" class="navlogo" />
       <a href="#one" class="navbar">Home</a>
+      <a href="search.php" class="navbar">Search</a>
       <a href="cofigure.php#two" class="navbar">DataBase</a>
     </nav>
     <div class="card text-center" style="display: flex;justify-content: center;align-self: center;margin-top: 50px;">

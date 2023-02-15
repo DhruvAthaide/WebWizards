@@ -324,6 +324,60 @@
       }
     }
 
+    /* Events */
+    .event-container {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f7f7f7;
+    }
+
+    .event-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+    }
+
+    .event-container>form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .event-container>label {
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .event-container>input[type="text"],
+    .event-container>textarea {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    .event-container>input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    .event-container>input[type="submit"] {
+      background-color: #008cba;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .event-container>input[type="submit"]:hover {
+      background-color: #0077a3;
+    }
+
+
+
     /* Footer */
     @import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:300);
 
@@ -372,7 +426,27 @@
       <a href="#three" class="navbar">Contact</a>
     </nav>
 
-    <div class="maincontent"></div>
+
+
+    <div class="maincontent">
+      <div class="events">
+        <div class="event-container" style="font-size: 16px">
+          <form action="" method="post">
+            <label for="email_to">To:</label>
+            <input type="text" name="email_to" id="email_to" required />
+            <label for="email_subject">Subject:</label>
+            <input type="text" name="email_subject" id="email_subject" required />
+            <label for="email_message">Message:</label>
+            <textarea name="email_message" id="email_message" required></textarea>
+            <input type="submit" value="Send Email" id="submit" />
+          </form>
+        </div>
+
+      </div>
+      <div class="chats">
+        <iframe src="http://localhost:8080" frameborder="3"></iframe>
+      </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
