@@ -263,6 +263,9 @@ if ($admin_prof == true) {
       </form>
     </div>
   </div>
+  <div style="margin: auto;width:180px;margin-top:15px">
+    <a href="https://deadsimplechat.com/dashboard/chatrooms" target="_blank" class="btn btn-warning">Monitor/View chats</a>
+  </div>
 
 
   <script>
