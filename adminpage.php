@@ -254,7 +254,7 @@ if ($admin_prof == true) {
     <div class="event-container" style="font-size: 16px">
       <form action="" id="javascript_form" method="post">
         <label for="email_to">To:</label>
-        <input type="email" value="wizzweb41@gmail.com" id="email_to" required />
+        <input type="email" id="email_to" required />
         <label for="email_subject">Subject:</label>
         <input type="text" name="subject" id="email_subject" required />
         <label for="email_message">Message:</label>
