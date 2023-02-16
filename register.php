@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DataBase</title>
+  <title>Register</title>
   <style>
     /* Basics */
     html,
@@ -282,7 +282,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
       <label for="college">College:</label>
       <input type="text" id="college" value="<?php echo $college; ?>" name="college" />
       <div id="lower">
-        <input type="submit" value="Login" />
+        <input type="submit" value="Register" />
       </div>
     </form>
   </div>
