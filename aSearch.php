@@ -203,11 +203,11 @@ if ($admin_prof == true) {
             <td>$row[sno]</td> 
             <td>$row[Username]</td> 
             <td>$row[Email]</td> 
-            <td>$row[gradYear]</td> 
+            <td>$row[gradyear]</td> 
             <td>$row[college]</td> 
             <td>$row[Stream]</td> 
             <td>
-            <a class='btn btn-primary btn-sm' href='/WebWizards_Git/edit.php?sno=$row[sno]&uname=$row[Username]&email=$row[Email]&gY=$row[gradYear]&st=$row[Stream]&cl=$row[college]'>Edit</a>
+            <a class='btn btn-primary btn-sm' href='/WebWizards_Git/edit.php?sno=$row[sno]&uname=$row[Username]&email=$row[Email]&gy=$row[gradyear]&st=$row[Stream]&cl=$row[college]'>Edit</a>
             <a class='btn btn-danger btn-sm' href='/WebWizards_Git/delete.php?sno=$row[sno]'>Delete</a>
             </td>
             ";

@@ -21,10 +21,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
   $uname = $_POST['username'];
   $email = $_POST['email'];
   $pass = $_POST['password'];
-  $gradyear = $_POST['gradyear'];
+  $gradyear = $_POST['year'];
   $stream = $_POST['stream'];
   $college = $_POST['college'];
-  $que = "INSERT INTO data ( sno,Username, Email, Password, gradYear, Stream,college)" . "VALUES ('$sno','$uname', '$email', '$pass', '$gradyear', '$stream', '$college')";
+  $que = "INSERT INTO data ( sno,Username, Email, Password, gradyear, Stream,college)" . "VALUES ('$sno','$uname', '$email', '$pass', '$gradyear', '$stream', '$college')";
 
   $conn->query($que);
 
@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
   $stream = "";
   $college = "";
 
-  header("location: /WebWizards_Git/index.php");
+  header("location:WebWizards_Git/index.php");
 }
 
 
