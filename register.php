@@ -270,17 +270,17 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <b>Registration:</b>
       </p>
       <label for="username">Username:</label>
-      <input type="text" id="username" name="username" value="<?php echo $uname; ?>" />
+      <input type="text" id="username" name="username" value="<?php echo $uname; ?>" autocomplete="off" required />
       <label for="email">Email:</label>
-      <input type="email" id="email" value="<?php echo $email ?>" name="email" />
+      <input type="email" id="email" value="<?php echo $email ?>" autocomplete="off" name="email" required />
       <label for="password">Password:</label>
-      <input type="password" id="password" value="<?php echo $pass; ?>" name="password" />
+      <input type="password" id="password" value="<?php echo $pass; ?>" name="password" required />
       <label for="year">Graduation Year:</label>
-      <input type="number" id="year" value="<?php echo $gradyear; ?>" name="year" />
+      <input type="number" id="year" value="<?php echo $gradyear; ?>" name="year" required />
       <label for="stream">Stream:</label>
-      <input type="text" id="stream" value="<?php echo $stream; ?>" name="stream" />
+      <input type="text" id="stream" required value="<?php echo $stream; ?>" autocomplete="off" name="stream" />
       <label for="college">College:</label>
-      <input type="text" id="college" value="<?php echo $college; ?>" name="college" />
+      <input type="text" id="college" value="<?php echo $college; ?>" name="college" autocomplete="off" required />
       <div id="lower">
         <input type="submit" value="Register" />
       </div>

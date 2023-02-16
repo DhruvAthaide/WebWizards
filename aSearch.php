@@ -148,8 +148,8 @@ if ($admin_prof == true) {
                 </div>
                 <br>
                 <div>
-                    <input type="text" name="search" class="form-control" placeholder="What Data to Search?" />
-                    <input type="submit" name="submit" value="search">
+                    <input type="text" name="search" class="form-control" placeholder="What Data to Search?" autocomplete="off" required />
+                    <input type="submit" name="submit" value="Search">
                 </div>
             </form>
         </div>

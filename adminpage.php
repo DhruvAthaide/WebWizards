@@ -254,9 +254,9 @@ if ($admin_prof == true) {
     <div class="event-container" style="font-size: 16px">
       <form action="" id="javascript_form" method="post">
         <label for="email_to">To:</label>
-        <input type="email" id="email_to" required />
+        <input type="email" id="email_to" autocomplete="off" required />
         <label for="email_subject">Subject:</label>
-        <input type="text" name="subject" id="email_subject" required />
+        <input type="text" name="subject" id="email_subject" autocomplete="off" required />
         <label for="email_message">Message:</label>
         <textarea name="text" id="email_message" required></textarea>
         <input type="submit" name="submit" value="Send" id="js_send" />

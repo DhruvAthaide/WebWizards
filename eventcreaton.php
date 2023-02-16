@@ -102,10 +102,10 @@ if (isset($_POST["submit"])) {
 </head>
 
 <body>
-  <div class="container" style="font-size: 16px">
+  <div class="container" style="font-size: 16px;margin-top: 70px;">
     <form action="" method="post">
       <label for="event_name">Event Name:</label>
-      <input type="text" name="event_name" id="event_name" required />
+      <input type="text" name="event_name" id="event_name" autocomplete="off" required />
       <label for="event_date">Date:</label>
       <input type="date" name="event_date" id="event_date" required />
       <label for="event_time">Time:</label>

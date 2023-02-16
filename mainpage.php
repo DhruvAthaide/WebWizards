@@ -524,8 +524,8 @@ if ($userprofile == true) {
             <h5>Front-end Developers & <span>Designers</span></h5>
             <p>Welcome to our team's about us section! We are a group of skilled and passionate coders who have come together to create an exceptional
               website that boasts both front-end and back-end development.
-              Our team is composed of talented individuals with diverse backgrounds, including computer science, software engineering, and web development.
-              With years of experience under our belts, we have honed our skills in a range of programming languages, including JavaScript, HTML, CSS, Python, PHP, and more.<br>
+              Our team is composed of talented individuals with diverse backgrounds, including computer science and web development.
+              With years of experience under our belts, we have honed our skills in a range of programming languages, including JavaScript, HTML, CSS, PHP, and more.<br>
               Our goal is to create a seamless user experience by designing an intuitive and aesthetically pleasing front-end that caters to our users' needs.
               We believe that the front-end is a critical component of any website, and we strive to create a visually stunning and engaging interface that is user-friendly and functional.
               On the back-end, our team's expertise lies in developing robust and scalable systems that support our website's core functionality. <br>
@@ -585,13 +585,13 @@ if ($userprofile == true) {
             <div class="topic-text">Send us a message</div>
             <form id="myform" method="post" action="https://script.google.com/macros/s/AKfycbw64ay3jQ29EtPS5l7-IINyEp0tSY3vJ0Ur01q4_NUwLB0hhzDeqRY545Hkku05iGMHAg/exec">
               <div class="input-box">
-                <input type="text" placeholder="Enter your name" id="full_name" name="full_name" required>
+                <input type="text" placeholder="Enter your name" id="full_name" name="full_name" autocomplete="off" required>
               </div>
               <div class="input-box">
-                <input type="text" placeholder="Enter your email" id="full_email" name="full_email" required>
+                <input type="text" placeholder="Enter your email" id="full_email" name="full_email" autocomplete="off" required>
               </div>
               <div class="input-box message-box">
-                <input type="text" placeholder="Enter your Message" id="full_message" name="full_message" required>
+                <input type="text" placeholder="Enter your Message" id="full_message" name="full_message" autocomplete="off" required>
               </div>
               <div class="button">
                 <input type="submit" class="submit-finalbtn" name="submit" required="" placeholder="SUBMIT">
