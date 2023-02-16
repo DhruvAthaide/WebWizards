@@ -45,8 +45,8 @@ $query = "SELECT * FROM data where sno='$sno'"
         #container {
             position: fixed;
             width: 340px;
-            height: 490px;
-            top: 50%;
+            height: 577;
+            top: 41%;
             left: 50%;
             margin-top: -271px;
             margin-left: -170px;

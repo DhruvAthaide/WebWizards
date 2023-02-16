@@ -66,8 +66,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     #container {
       position: fixed;
       width: 340px;
-      height: 490px;
-      top: 50%;
+      height: 575px;
+      top: 41%;
       left: 50%;
       margin-top: -271px;
       margin-left: -170px;
