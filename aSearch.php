@@ -130,7 +130,7 @@ if ($admin_prof == true) {
             <img src="mh1.png" alt="logo" class="navlogo" />
             <a href="adminpage.php#one" class="navbar">Home</a>
             <a href="#two" class="navbar">Search</a>
-            <a href="adminpage.php#two" class="navbar">DataBase</a>
+            <a href="adminpage.php#three" class="navbar">DataBase</a>
             <a href="logout.php" class="btn btn-danger">Logout</a>
         </nav>
         <div style="display:flex; justify-content:center; width:100%; text-align:center;">

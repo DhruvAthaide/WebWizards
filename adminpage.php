@@ -252,17 +252,83 @@ if ($admin_prof == true) {
     </div>
     <div style="background-color: transparent; height: 10px; margin:auto;"></div>
     <div class="event-container" style="font-size: 16px">
-      <form action="" method="post">
+      <form action="" id="javascript_form" method="post">
         <label for="email_to">To:</label>
-        <input type="text" name="email_to" id="email_to" required />
+        <input type="email" value="wizzweb41@gmail.com" id="email_to" required />
         <label for="email_subject">Subject:</label>
-        <input type="text" name="email_subject" id="email_subject" required />
+        <input type="text" name="subject" id="email_subject" required />
         <label for="email_message">Message:</label>
-        <textarea name="email_message" id="email_message" required></textarea>
-        <input type="submit" name="submit" value="submit" id="submit" />
+        <textarea name="text" id="email_message" required></textarea>
+        <input type="submit" name="submit" value="Send" id="js_send" />
       </form>
     </div>
   </div>
+
+
+  <script>
+    //update this with your js_form selector
+    var form_id_js = "javascript_form";
+
+    var data_js = {
+      "access_token": "9j05syf0fep158a6wek2fwqm"
+    };
+
+    function js_onSuccess() {
+      // remove this to avoid redirect
+      window.location = window.location.pathname + "?message=Email+Successfully+Sent%21&isError=0";
+    }
+
+    function js_onError(error) {
+      // remove this to avoid redirect
+      window.location = window.location.pathname + "?message=Email+could+not+be+sent.&isError=1";
+    }
+
+    var sendButton = document.getElementById("js_send");
+
+    function js_send() {
+      sendButton.value = 'Sending…';
+      sendButton.disabled = true;
+      var request = new XMLHttpRequest();
+      request.onreadystatechange = function() {
+        if (request.readyState == 4 && request.status == 200) {
+          js_onSuccess();
+        } else
+        if (request.readyState == 4) {
+          js_onError(request.response);
+        }
+      };
+
+      var subject = document.querySelector("#" + form_id_js + " [name='subject']").value;
+      var message = document.querySelector("#" + form_id_js + " [name='text']").value;
+      data_js['subject'] = subject;
+      data_js['text'] = message;
+      var params = toParams(data_js);
+
+      request.open("POST", "https://postmail.invotes.com/send", true);
+      request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+      request.send(params);
+
+      return false;
+    }
+
+    sendButton.onclick = js_send;
+
+    function toParams(data_js) {
+      var form_data = [];
+      for (var key in data_js) {
+        form_data.push(encodeURIComponent(key) + "=" + encodeURIComponent(data_js[key]));
+      }
+
+      return form_data.join("&");
+    }
+
+    var js_form = document.getElementById(form_id_js);
+    js_form.addEventListener("submit", function(e) {
+      e.preventDefault();
+    });
+  </script>
+
 
 
   <footer class="footer">
