@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
   $stream = "";
   $college = "";
 
-  header("location:WebWizards_Git/index.php");
+  header("location:index.php");
 }
 
 
