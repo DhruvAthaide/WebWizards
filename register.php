@@ -10,6 +10,7 @@ $email = "";
 $pass = "";
 $gradyear = "";
 $stream = "";
+$college = "";
 
 
 
@@ -22,7 +23,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
   $pass = $_POST['password'];
   $gradyear = $_POST['gradyear'];
   $stream = $_POST['stream'];
-  $que = "INSERT INTO data ( sno,Username, Email, Password, gradYear, Stream)" . "VALUES ('$sno','$uname', '$email', '$pass', '$gradyear', '$stream')";
+  $college = $_POST['college'];
+  $que = "INSERT INTO data ( sno,Username, Email, Password, gradYear, Stream,college)" . "VALUES ('$sno','$uname', '$email', '$pass', '$gradyear', '$stream', '$college')";
 
   $conn->query($que);
 
@@ -33,6 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
   $pass = "";
   $gradyear = "";
   $stream = "";
+  $college = "";
 
   header("location: /WebWizards_Git/index.php");
 }
@@ -276,6 +279,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
       <input type="number" id="year" value="<?php echo $gradyear; ?>" name="year" />
       <label for="stream">Stream:</label>
       <input type="text" id="stream" value="<?php echo $stream; ?>" name="stream" />
+      <label for="college">College:</label>
+      <input type="text" id="college" value="<?php echo $college; ?>" name="college" />
       <div id="lower">
         <input type="submit" value="Login" />
       </div>

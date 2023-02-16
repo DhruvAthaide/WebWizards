@@ -16,6 +16,7 @@ $uname = $_GET['uname'];
 $email = $_GET['email'];
 $year = $_GET['gY'];
 $stream = $_GET['st'];
+$college = $_GET['cl'];
 
 $query = "SELECT * FROM data where sno='$sno'"
 
@@ -260,6 +261,8 @@ $query = "SELECT * FROM data where sno='$sno'"
             <input type="number" id="year" value="<?php echo $year; ?>" name="year" />
             <label for="stream">Stream:</label>
             <input type="text" id="stream" value="<?php echo $stream; ?>" name="stream" />
+            <label for="college">College:</label>
+            <input type="text" id="college" value="<?php echo $college; ?>" name="college" />
             <div id="lower">
                 <input type="submit" name="submit" value="Update" />
             </div>
@@ -291,8 +294,9 @@ if ($_POST['submit']) {
     $email = $_POST['email'];
     $year = $_POST['year'];
     $stream = $_POST['stream'];
+    $college = $_POST['college'];
 
-    $query = "UPDATE data SET sno='$sno', Username='$uname', Email='$email', gradYear='$year', Stream='$stream' " .  "WHERE sno='$sno'";
+    $query = "UPDATE data SET sno='$sno', Username='$uname', Email='$email', gradYear='$year', Stream='$stream', college='$college' " .  "WHERE sno='$sno'";
 }
 
 $data = $conn->query($query);

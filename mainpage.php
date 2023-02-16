@@ -492,7 +492,7 @@ if ($userprofile == true) {
         </div>
       </div>
       <div class="chats">
-        <iframe src="http://localhost:8080" width="400" height="480" frameborder="1"></iframe>
+        <iframe src="https://deadsimplechat.com/9SUwSnD13" width="600" height="480" scrolling="no" style="overflow: hidden;border-radius: 40px; border: 2px solid #000000;" frameborder=" 1"></iframe>
       </div>
     </div>
 
