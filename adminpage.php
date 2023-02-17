@@ -2,6 +2,8 @@
 
 session_start();
 
+error_reporting(0);
+
 $admin_prof = $_SESSION['adm'];
 
 if ($admin_prof == true) {

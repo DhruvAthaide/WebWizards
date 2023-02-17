@@ -16,6 +16,8 @@ $college = "";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
+// $query = "SELECT * from data Username";
+
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
   $sno = $_POST['sno'];
   $uname = $_POST['username'];
@@ -24,6 +26,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
   $gradyear = $_POST['year'];
   $stream = $_POST['stream'];
   $college = $_POST['college'];
+
+  $names = "SELECT * from data Username";
+
+  $names_que = $conn->query($names);
+
+
+
   $que = "INSERT INTO data ( sno,Username, Email, Password, gradyear, Stream,college)" . "VALUES ('$sno','$uname', '$email', '$pass', '$gradyear', '$stream', '$college')";
 
   $conn->query($que);

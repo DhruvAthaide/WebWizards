@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+error_reporting(0);
+
 $admin_prof = $_SESSION['adm'];
 
 if ($admin_prof == true) {
@@ -180,7 +182,7 @@ if ($admin_prof == true) {
                 $uname = "";
                 $pass = "";
 
-                mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+                error_reporting(0);
 
                 $conn = new mysqli($servername, $username, $password, $dbname);
 
